@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: aa2cc86c5a0361541bab10f6433f655a
+guid: 7e5844608a8c02240bf0bd0cefa93f31
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -105,64 +105,18 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: guy animation_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 202
-        height: 403
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a9632ccedc54e3843b12651849d915b8
-      internalID: 1886638516
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: guy animation_2
-      rect:
-        serializedVersion: 2
-        x: 214
-        y: 0
-        width: 200
-        height: 403
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 129e76a4b99d6e849953f95e3e72d233
-      internalID: -1454851304
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: fe41e3b3553173a42a65d4b7849eaaaa
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      guy animation_2: -1454851304
-      guy animation_3: -1874438546
-      guy animation_1: 2042085032
-      guy animation_0: 1886638516
+    nameFileIdTable: {}
   spritePackingTag: 
   pSDRemoveMatte: 0
   userData: 
