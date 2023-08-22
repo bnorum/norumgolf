@@ -10,18 +10,28 @@ public class GoalCollision : MonoBehaviour
     private Transform goalTransform;
     private Transform ballTransform;
     public int holenum;
+    public Rigidbody ballRB;
+
+
+    public AudioSource randomSound;
+    public AudioClip[] audioSources;
+    public AudioClip clapping;
 
     private void Start() {
         instance = this;
-        Ball = GameObject.FindGameObjectWithTag("Ball");
-        Goal = GameObject.FindGameObjectWithTag("Goal");
         goalTransform = GetComponent<Transform>();
         ballTransform = Ball.GetComponent<Transform>();
+        ballRB = Ball.GetComponent<Rigidbody>();
         complete = true;
         printcongrats = false;
         holenum = 1;
     }
 
+    private void sfx(){
+        randomSound.clip = audioSources[Random.Range(0, audioSources.Length)];
+        randomSound.Play();
+    }
+    
     private void Update() {
         
         if (IsObjectInside(Ball, Goal) && complete)
@@ -29,21 +39,27 @@ public class GoalCollision : MonoBehaviour
             complete = false;
             holenum++;
             if (holenum == 2) {
-            Invoke("hole2",3);
+                sfx();
+                Invoke("hole2",3);
             }
             if (holenum == 3) {
-            Invoke("hole3",3);
+                Invoke("hole3",3);
+                sfx();
             }
             if (holenum == 4) {
                 printcongrats = true;
+                sfx();
+                randomSound.clip = clapping;
+                randomSound.Play();
             }
         }
     }
 
     public void hole2() {
-        goalTransform.position = new Vector3(-23.8f, -2f, -11.14f);
+        goalTransform.position = new Vector3(-23.95f, -2f, -11.61f);
         ballTransform.position = new Vector3(-13f, -1.2f, -1.5f);
         complete = true;
+        
         //ballmove.ballHole2();
     }
 

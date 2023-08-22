@@ -13,6 +13,10 @@ public class LineForce : MonoBehaviour
     public bool isAiming;
     public int score;
 
+    public AudioSource randomSound;
+
+    public AudioClip[] audioSources;
+
     private Rigidbody rigidBody;
 
 
@@ -57,6 +61,7 @@ public class LineForce : MonoBehaviour
 
     private void Shoot(Vector3 worldPoint) {
         score+=1;
+        sfx();
         isAiming = false;
         lineRenderer.enabled = false;
 
@@ -67,9 +72,14 @@ public class LineForce : MonoBehaviour
 
         rigidBody.AddForce(direction*strength*shotPower);
         isIdle = true;
+
     }
 
     
+    private void sfx(){
+        randomSound.clip = audioSources[Random.Range(0, audioSources.Length)];
+        randomSound.Play();
+    }
 
 
     private void DrawLine(Vector3 worldPoint) {
